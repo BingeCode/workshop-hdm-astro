@@ -1,11 +1,10 @@
 {
-  "name": "astrofy",
-  "description": "Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.",
+  "name": "workshop-hdm-astro",
+  "description": "This is a portfolio website based on github.com/manuelernestog/astrofy used to showcase the workings of Astro.",
   "type": "module",
-  "version": "2.5.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
-    "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
