@@ -1,27 +1,23 @@
 ---
-export interface Props {
-    dark?: boolean
-}
-
-const {dark=false} = Astro.props as Props
+const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+import { Image } from "@astrojs/image/components";
 ---
 
-
-<div class={`card ${dark && 'dark'}`}>
-    <slot/>
+<div class="md:w-1/3 w-full">
+  <a href={url} target={target}>
+    <div class="card bg-base-100 transition ease-in-out hover:shadow-xl mx-6 my-2 hover:scale-[102%]">
+      <Image aspectRatio="16:9" width={750} format="webp" src={img} alt={title} />
+      <div class="card-body">
+        <h2 class="card-title">
+          {title}
+          {badge && <div class="badge badge-secondary">{badge}</div>}
+        </h2>
+        <p>{desc}</p>
+        <div class="card-actions justify-end">
+          {tags && tags.map((tag) => <div class="badge badge-outline">{tag}</div>)}
+        </div>
+      </div>
+    </div>
+  </a>
 </div>
-
-<style>
-.card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-.dark{
-    background: var(--color-primary);
-    color: #fff;
-}
-</style>
 

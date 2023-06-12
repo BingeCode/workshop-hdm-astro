@@ -1,49 +1,17 @@
----
-import logo from "../images/logo.svg"
----
-
-<header class="header">
-    <div class="container">
-      <div class="logo">
-        <a href="/">
-          <img src={logo} alt="" />
-        </a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </ul>
-      </nav>
+<div
+  class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"
+>
+  <div class="navbar">
+    <div class="navbar-start">
+      <label for="my-drawer" class="btn btn-square btn-ghost">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"
+          ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </label>
     </div>
-</header>
-<style>.header {
-    height: 70px;
-    background: var(--color-primary);
-  }
-  
-  .header .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-  
-  .header img {
-    height: 35px;
-    vertical-align: middle;
-  }
-  
-  .header nav ul {
-    display: flex;
-  }
-  
-  .header nav ul li {
-    padding: 0 10px;
-  }
-  
-  .header nav ul li a {
-    color: #fff;
-  }</style>
+    <div class="navbar-center">
+      <a class="btn btn-ghost normal-case text-xl" href="/">Manuel Ernesto ⚡️</a>
+    </div>
+    <div class="navbar-end"></div>
+  </div>
+</div>
