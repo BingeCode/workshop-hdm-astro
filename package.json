@@ -6,6 +6,7 @@
   "private": false,
   "scripts": {
     "start": "astro dev",
+    "auto": "astro dev --open",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
