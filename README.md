@@ -33,4 +33,12 @@ Suche eine geeignete Seite im Projekt aus und binde die Counter Komponente ein.
 
 Wird sie angezeigt? Wenn nicht, was könnte dir noch fehlen?
 
+### Aufgabe 3
+
+Öffne die Dev Tools (bei den meisten Browsern mit F12) und wechsel zum Network Tab.
+
+Lade die Seite neu und beobachte den Network Tab, während du nach unten scrollst.
+
+Die React Komponente sollte erst dann geladen werden, wenn sie auch im View Port sichtbar wird.
+
 Wenn du mit der Aufgabe fertig bist, wechsel zum `final` branch. Dort findest du die Lösung und finale Code Base.
