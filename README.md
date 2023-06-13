@@ -1,38 +1,33 @@
 # Workshop HDM Astro
 
-## Übung 2
+## Übung 3
 
 ### Einführung
 
-In dieser Übung lernst du, wie du eine Astro-Seite erstellst und in die Webseite einbindest.
+In dieser Übung lernst du, wie du Layouts verwendest.
 
-Wenn du einen Blick auf die Projektstruktur unter `src/pages` wirfst, siehst du dass wir bereits ein paar Pages (bzw. Pfade) haben:
-`/blog/`, `/cv`, `/projects` und die Homepage (`index.astro`). Dabei ist `/blog/` ein Sonderfall, den wir erst später behandeln werden.
+Wenn du Übung 1 schon gemeistert hast, sollte diese Übung keine Herausforderung für dich sein.
 
-Was allerdings geschieht, wenn du im Browser [localhost:3000/hello-world](http://localhost:3000/hello-world) aufrufst?
+Layouts sind auch nur Astro Komponenten, die einfach ein bestimmtest Layout vorgeben.
+Öffne mal die Suche (SHIFT + CMD + F) und suche nach BaseLayout.
+Du wirst sehen, dass dieses Layout in der App sehr häufig verwendet wird.
+Die BaseLayout Komponente haben wir definiert. Sie ist das Standard-Layout für die gesamte Website.
+Doch wir müssen explizit pro Seite angeben, dass wir dieses Layout verwenden wollen.
 
-Richtig, du bekommst eine Standard-404-Fehlerseite. Die liefert Astro von Haus aus mit.
-Aber du kannst auch deine eigene 404-Seite bauen.
-Das Prinzip ist hierbei gleich wie bei allen anderen Pages.
-Die Seite muss in dem Ordner `src/pages` liegen.
-Das besondere bei dieser Page ist, dass Astro automatisch auf `/404` umleitet, wenn irgend eine Seiten-URL nicht gefunden wird.
+Auf einer Seite fehlt unser BaseLayout noch. Kommst du darauf, welche?
 
-### Aufgabe
+(Tipp: Du hast erst kürzlich mit dieser Seite gearbeitet)
 
-Erstelle zunächst eine `404.astro` (oder 404.md) in `src/pages`.
+Richtig, es ist die Fehlerseite. Diese hat noch nicht unser BaseLayout.
 
-Du kannst das folgende Code Snippet für die Seite verwenden oder deine eigene 404 Seite gestalten:
+### Aufgabe 1
 
-```
-<div class="text-center">
-  <h1 class="text-9xl font-bold mb-2">404</h1>
-  <h3 class="text-2xl">The page you're looking for couldn't be found.</h3>
-  <a class="btn btn-accent mt-9" href="/">Home</a>
-</div>
-```
+Ändere 404.astro so, dass es das BaseLayout verwendet.
 
-Überprüfe nun, ob die 404 Seite korrekt aufgerufen wird, wenn du eine fehlende Seite aufrufst.
+### Aufgabe 2
 
-### Bonus
+Sobald du soweit bist, nutze das Prop von BaseLayout, das die Sidebar versteckt. Denn wir wollen die Sidebar nicht auf unserer 404 Seite anzeigen.
 
-Wenn du schneller als die anderen fertig bist und dir langweilig ist, erstelle eine normale Seite, z.B. `/shop` und gestalte sie ein wenig :)
+### Aufgabe 3
+
+Warum ändert sich der Style auf der 404 Seite, wenn wir das BaseLayout verwenden? Welche Zeile ist dafür verantwortlich?
