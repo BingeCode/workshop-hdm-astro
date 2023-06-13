@@ -4,7 +4,7 @@
 
 Stelle sicher, dass du [NodeJS](https://nodejs.org/en) installiert hast.
 
-Öffne das Terminal und gehen in den Ordner, in dem du das Repository ablegen willst.
+Öffne den Terminal und gehen in den Ordner, in dem du das Repository ablegen willst.
 
 Führe das folgende Skript aus (einfach alles copy pasten):
 
