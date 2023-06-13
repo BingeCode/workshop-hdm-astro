@@ -1,44 +1,38 @@
 # Workshop HDM Astro
 
-## Setup
-
-Stelle sicher, dass du [NodeJS](https://nodejs.org/en) installiert hast.
-
-Öffne das Terminal und gehen in den Ordner, in dem du das Repository ablegen willst.
-
-Führe das folgende Skript aus:
-
-```
-git clone "https://github.com/BingeCode/workshop-hdm-astro.git";
-cd workshop-hdm-astro;
-npm install;
-npm run auto;
-```
-
-## Wie funktionieren die Übungen
-
-Die Übungen in diesem Workshop bauen aufeinander auf und sind immer in der `README.md` definiert.
-Wenn du mit der nächsten Übung fortfahren willst, wechsel in den nächsten Branch.
-
-Die Branches haben das Format `uebung-NUMMER`.
-Der `main` branch enthält Übung 1 (siehe unten).
-Wenn du mit Übung 1 fertig bist, kannst du zum Branch `uebung-2` wechseln und dort die Lösung von Übung 1 (und auch die zweite Übung) finden.
-
-## Übung 1
+## Übung 2
 
 ### Einführung
 
-In dieser ersten Übung lernst du, wie du eine Astro-Komponente erstellst, Props verwendest und eine Komponente in die Seite einbindest.
+In dieser Übung lernst du, wie du eine Astro-Seite erstellst und in die Webseite einbindest.
 
-Wenn du einen Blick auf `src/layouts/BaseLayout.astro` (eine Astro-Komponente) wirfst, siehst du die beiden Teile, über die wir gerade gesprochen haben: Das Component Script am Anfang der Datei (innerhalb des code fences ```) und das Component Template nach den code fences.
+Wenn du einen Blick auf die Projektstruktur unter `src/pages` wirfst, siehst du dass wir bereits ein paar Pages (bzw. Pfade) haben:
+`/blog/`, `/cv`, `/projects` und die Homepage (`index.astro`). Dabei ist `/blog/` ein Sonderfall, den wir erst später behandeln werden.
 
-`BaseLayout.astro` definiert das Layout für die gesamte Seite (wir werden uns Layouts später ansehen. Du musst für diese Übung nicht verstehen, wie sie funktionieren).
+Was allerdings geschieht, wenn du im Browser [localhost:3000/hello-world](http://localhost:3000/hello-world) aufrufst?
 
-In Zeile 38 siehst du das Statement `includeSidebar && (...)`
-Dieses Statement prüft, ob `includeSidebar` gesetzt ist, und wenn ja, wird die Sidebar gerendert.
+Richtig, du bekommst eine Standard-404-Fehlerseite. Die liefert Astro von Haus aus mit.
+Aber du kannst auch deine eigene 404-Seite bauen.
+Das Prinzip ist hierbei gleich wie bei allen anderen Pages.
+Die Seite muss in dem Ordner `src/pages` liegen.
+Das besondere bei dieser Page ist, dass Astro automatisch auf `/404` umleitet, wenn irgend eine Seiten-URL nicht gefunden wird.
 
 ### Aufgabe
 
-Erstelle eine neue Sidebar Komponente (`Sidebar.astro`) in `src/components/` und extrahiere den relevanten Code aus `BaseLayout.astro`.
+Erstelle zunächst eine `404.astro` (oder 404.md) in `src/pages`.
 
-(TIPP: Stell sicher, dass du die benötigten Props an `Sidebar.astro` übergibst.)
+Du kannst das folgende Code Snippet für die Seite verwenden oder deine eigene 404 Seite gestalten:
+
+```
+<div class="text-center">
+  <h1 class="text-9xl font-bold mb-2">404</h1>
+  <h3 class="text-2xl">The page you're looking for couldn't be found.</h3>
+  <a class="btn btn-accent mt-9" href="/">Home</a>
+</div>
+```
+
+Überprüfe nun, ob die 404 Seite korrekt aufgerufen wird, wenn du eine fehlende Seite aufrufst.
+
+### Bonus
+
+Wenn du schneller als die anderen fertig bist und dir langweilig ist, erstelle eine normale Seite, z.B. `/shop` und gestalte sie ein wenig :)
