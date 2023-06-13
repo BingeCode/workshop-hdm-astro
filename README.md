@@ -6,11 +6,12 @@ Stelle sicher, dass du [NodeJS](https://nodejs.org/en) installiert hast.
 
 Öffne das Terminal und gehen in den Ordner, in dem du das Repository ablegen willst.
 
-Führe das folgende Skript aus:
+Führe das folgende Skript aus (einfach alles copy pasten):
 
 ```
 git clone "https://github.com/BingeCode/workshop-hdm-astro.git";
 cd workshop-hdm-astro;
+for branch in `git branch -r | grep -v HEAD | grep -v 'origin/main'`; do git checkout --track $branch; done; git checkout main;
 npm install;
 npm run auto;
 ```
