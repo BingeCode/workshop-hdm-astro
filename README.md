@@ -24,8 +24,8 @@ Damit ist React schon eingerichtet 🎉
 
 in `src/components` findest du zwei Files:
 
-- Counter.tsx
-- Counter.css
+- `Counter.tsx`
+- `Counter.css`
 
 Das ist unsere neue React Komponente, die wir schon für dich bereitgestellt haben.
 
