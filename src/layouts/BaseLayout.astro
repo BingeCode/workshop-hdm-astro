@@ -13,6 +13,14 @@ const {
   includeSidebar = true,
   sideBarActiveItemID,
 } = Astro.props;
+
+interface Props {
+  image?: string;
+  title?: string;
+  description?: string;
+  includeSidebar?: boolean;
+  sideBarActiveItemID?: string;
+}
 ---
 
 <!DOCTYPE html>
