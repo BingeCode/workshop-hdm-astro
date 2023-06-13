@@ -43,8 +43,15 @@ Wenn du einen Blick auf `src/layouts/BaseLayout.astro` (eine Astro-Komponente) w
 In Zeile 38 siehst du das Statement `includeSidebar && (...)`
 Dieses Statement prüft, ob `includeSidebar` gesetzt ist, und wenn ja, wird die Sidebar gerendert.
 
-### Aufgabe
+### Aufgabe 1
 
 Erstelle eine neue Sidebar Komponente (`Sidebar.astro`) in `src/components/` und extrahiere den relevanten Code aus `BaseLayout.astro`.
 
 (TIPP: Stell sicher, dass du die benötigten Props an `Sidebar.astro` übergibst.)
+
+### Aufgabe 2
+
+Füge ein interface zu der BaseLayout Komponente hinzu, die die Prop-Typen definiert.
+Achte auch darauf, welche Props optional sein können.
+
+Prüfe dann, ob deine IDE automatisch (mittels intellisense) vorschlägt, welche Props du zum Beispiel in `index.astro` zu `BaseLayout` hinzufügen kannst. Du kannst zum Beispiel `includeSidebar={false}` setzen. Fange an zu tippen oder drücke `CTRL + SPACE`.
