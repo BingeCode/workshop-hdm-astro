@@ -16,6 +16,11 @@ npm install;
 npm run auto;
 ```
 
+## Präsentation
+
+Du kannst die Präsentation live mitverfolgen (und nachschlagen, falls du etwas nicht verstanden hast)
+[Klick hier](https://docs.google.com/presentation/d/1Jfhkrr4miYid448SGklj-X6R9COtJxdIkejl-SBqr4M/edit?usp=sharing)
+
 ## Wie funktionieren die Übungen
 
 Die Übungen in diesem Workshop bauen aufeinander auf und sind immer in der `README.md` definiert.
