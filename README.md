@@ -1,9 +1,13 @@
 # Workshop HDM Astro
 
-## Übung 4
+## Ende
 
-### Einführung
+Glückwunsch, du bist am Ende unseres ersten Workshop-Teils angekommen 🙌🏻
 
-In dieser Übung lernst du, wie du eine React Komponente in Astro einbindest.
+Wir hoffen, es hat dir gefallen und du konntest dich für Astro begeistern 😍
 
-### Aufgabe
+Nächste Woche folgen noch einige fortgeschrittene Themen, die Astro richtig glänzen lassen ✨
+
+In diesem Branch liegt die finale Code Base und damit auch die Lösung für Übung 4 🤓
+
+Bis nächste Woche 👋🏻
