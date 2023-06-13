@@ -1,13 +1,15 @@
 import { useState } from "react";
 import "./Counter.css";
 
+interface CounterProps {
+  children?: JSX.Element;
+  count: number;
+}
+
 export default function Counter({
   children,
   count: initialCount,
-}: {
-  children: JSX.Element;
-  count: number;
-}) {
+}: CounterProps) {
   const [count, setCount] = useState(initialCount);
   const add = () => setCount((i) => i + 1);
   const subtract = () => setCount((i) => i - 1);
