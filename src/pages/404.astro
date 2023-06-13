@@ -1,5 +1,19 @@
-<div class="text-center">
-  <h1 class="text-9xl font-bold mb-2">404</h1>
-  <h3 class="text-2xl">The page you're looking for couldn't be found.</h3>
-  <a class="btn btn-accent mt-9" href="/">Home</a>
-</div>
+---
+import Counter from "../components/counter";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const someProps = {
+  count: 0,
+};
+---
+
+<BaseLayout title="404: Not Found" includeSidebar={false}>
+  <div class="text-center">
+    <h1 class="text-9xl font-bold mb-2">404</h1>
+    <h3 class="text-2xl">The page you're looking for couldn't be found.</h3>
+    <a class="btn btn-accent mt-9" href="/">Home</a>
+  </div>
+  <Counter {...someProps} client:visible>
+    <h1>Hello, React!</h1>
+  </Counter>
+</BaseLayout>
