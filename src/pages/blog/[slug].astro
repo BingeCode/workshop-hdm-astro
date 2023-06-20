@@ -6,8 +6,8 @@ import PostLayout from "../../layouts/PostLayout.astro";
 export async function getStaticPaths() {
   const postEntries = await getCollection("blog");
   return postEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
+    //Return the Object to generate the Route
+    //Return the whole entry-Object to use the Data in Site, Tip: Look at Line 18 to see which Object to return
   }));
 }
 
