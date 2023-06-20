@@ -4,26 +4,36 @@
 
 ### Einführung
 
-In dieser Übung geht es um Markdown und Extended Markdown.
+In dieser Übung geht es um Extended Markdown.
 
 ### Aufgabe 1
 
-Erstelle eine Markdown Page `test.md` in `src/pages`, füge Text hinzu (zB den Text aus einem der Blog Posts) und teste den Aufruf im Browser.
+Führe in der Console `npx astro add mdx` auf root-Ebene aus und folge den Schritten, um die MDX-Integration hinzuzufügen.
 
 ### Aufgabe 2
 
-Binde nun die `NewLayout.astro` Layout Komponente über Frontmatter in der `.md` page ein.
+Wandle die neue `test.md` Seite in eine `.mdx` Seit um und teste sie im Browser.
+Baue die `Contact.jsx` Komponente in die neue `test.mdx` Seite ein und rufe die Seite auf.
+
+> Tip: Der Import-Pfad ist relativ zum `test.md` File.
+
+Vergiss nicht, eine Direktive auf die React-Komponente zu setzen.
 
 ### Aufgabe 3
 
-Modifiziere die `NewLayout.astro` Komponente so, dass im `Header` und `BaseHead` der Titel aus dem `.md` Frontmatter übergeben wird.
-Der `BaseHead` braucht zusätzlich noch die `description`
+In dieser Aufgabe installieren wir eines der remark-Plugins, um uns ein automatisches Inhaltsverzeichnis für `test.mdx` zu erstellen.
+Führe `npm install remark-toc` aus, um das Plugin zu installieren.
+Füge die folgende Konfiguration zur `astro.config.mjs` hinzu:
 
-Füge eine `h1` Überschrift zum `article` Element hinzu, die den Titel aus der `.md` Seite rendert.
+```
+import remarkToc from "remark-toc";
 
-Füge zusätzlich ein `blockquote` Element unter der `h1` Überschrift hinzu, die als Inhalt das automatisch generierte `file` prop von Frontmatter rendert.
+markdown: {
+    remarkPlugins: [remarkToc],
+  },
+```
 
-### Aufgabe 4
+Damit ist das Plugin konfiguriert.
 
-Füge in `test.md` zwei Überschriften hinzu (mittels `#`).
-Verlinke nun so von der einen Überschrift auf die andere, dass du das automatic heading ids feature von Astro verwendest und teste es im Browser.
+Um die Tabelle zu erstellen, musst du nur `## Table of Contents` zu `test.mdx` hinzufügen.
+Damit sollten alle Headings (h1-h6) automatisch im Inhaltsverzeichnis erscheinen.
