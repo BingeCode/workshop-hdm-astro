@@ -43,7 +43,7 @@ const { page } = Astro.props;
     )
     
   }
-  <SubscribeButton/>
+  <SubscribeButton client:visible/>
   <div class="flex justify-between">
     {
       page.url.prev ? (

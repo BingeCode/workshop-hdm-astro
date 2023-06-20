@@ -1,13 +1,11 @@
-//Import the Store first
-//Import the useful Nanostores-Function
+import { countSubscribers } from '../stores/subscribers';
+import { useStore } from '@nanostores/react';
 
 const CountSubscribers = () =>{
-    //Read and Save the Store in a Constant, the component should rerender with every change 
-
-    //Write the Contstant in the p-Tag to show the Stores value on display
+    const number = useStore(countSubscribers)
     return(
         <div class="pb-6">
-            <p class="text-center">👀 Bereits ... Subscriber</p> 
+            <p class="text-center">👀 Bereits {number} Subscriber</p>
         </div>
     )
 }

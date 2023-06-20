@@ -1,9 +1,9 @@
-//Import the Store first
+import { countSubscribers } from "../stores/subscribers"
 
 const SubscribeButton = () =>{
 
     const countUp = () =>{
-        //State should count up with every Click
+        countSubscribers.set(countSubscribers.get() + 1)
     }
 
     return(
