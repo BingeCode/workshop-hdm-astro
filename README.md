@@ -1,10 +1,10 @@
 # Workshop HDM Astro
 
-## Übung 7
+## Übung 8
 
 ### Einführung
 
-In dieser Übung geht es um Extended Markdown.
+In dieser Übung geht es um ...
 
 ### Aufgabe 1
 
