@@ -1,13 +1,9 @@
 # Workshop HDM Astro
 
-## Ende
+## Übung 5
 
-Glückwunsch, du bist am Ende unseres ersten Workshop-Teils angekommen 🙌🏻
+Willkommen im zweiten Teil unseres Workshops.
 
-Wir hoffen, es hat dir gefallen und du konntest dich für Astro begeistern 😍
+Wir starten mit einer leichten Einstiegsübung in Hybrides Rendering
 
-Nächste Woche folgen noch einige fortgeschrittene Themen, die Astro richtig glänzen lassen ✨
-
-In diesem Branch liegt die finale Code Base und damit auch die Lösung für Übung 4 🤓
-
-Bis nächste Woche 👋🏻
+##
