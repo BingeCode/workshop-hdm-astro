@@ -4,7 +4,7 @@
 
 ### Einführung
 
-In dieser Übung geht es um Markdown und Extended Markdown.
+In dieser Übung geht es um Markdown.
 
 ### Aufgabe 1
 
