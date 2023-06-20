@@ -1,6 +1,6 @@
 # Workshop HDM Astro
 
-## Übung 6
+## Übung 7
 
 ### Einführung
 
