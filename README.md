@@ -1,28 +1,42 @@
 # Workshop HDM Astro
 
-## Übung 8
+## Übung 9
 
 ### Einführung
 
-In dieser Übung wirst du mit dynamisches Routing in Astro implementieren, um die Blog-Einträge aus der
-Content Collection abzurufen, um dafür nicht für jeden Artikel eine seperate Page erstellen zu müssen.
+In dieser Übung wirst du mit Hilfe der Nano Stores Library eine Lösung für globales State Management
+zwischen zwei interaktiven Astro-Islands (React Komponenten) implementieren.
 
 ### Aufgabe 1
 
-In der Date `pages/blog/[slug].astro` findest du bereits, die `getStaticPaths()`-Funktion, als Herzstück
-des dynamischen Routings. Über die `getCollection`-Funktion werden hier alle Markdown-Artikel abgerufen
-und in der Konstante `postEntries` als Array an Objekten gespeichert.
+Zunächst müssen wir in Astro die Nano Stores Library installieren.
+Mit `npm install nanostores @nanostores/react` wird diese installiert und in den Dependencies vermerkt.
 
-Dieser Array wird nun über `map()` durchlaufen. Für das erstellen der Routes muss nun ein bestimmtes Objekt 
-zurückgegeben werden, dass den variablen Paramter der URL enthält.
-
-Tipp: In Content Collections entspricht die Slug dem Dateinamen und lässt sich hier über `entry.slug` aufrufen
+Damit ist NanoStores schon eingerichtet 🎉
 
 ### Aufgabe 2
 
-Neben dem Parameter für das Routing soll nun auch noch der komplette Blog-Eintrag zurückgegeben werden, damit
-die dynamisch erstellte Seite die Daten verarbeiten und anzeigen kann.
+Der globale Store wurde für dich schon implementiert und lässt sich im Ordner `store/subscribers.js` finden.
+In der Datei `components/SubscribeButton.jsx` befindet sich nun eine React-Componte, die auf der Seite 
+`pages/blog/[...page].astro` eingbunden ist.
 
-Welches Objekt muss neben dem params Objekt im return-Wert stehen?
+Importiere zunächst den Store und vervollständige nun die Funktion `countUp()`, sodass immer wenn auf den
+Subscribe Button geklickt wird, die Anzahl der Subscriber im State erhöht wird.
 
-Tipp: Schaue in Zeile 18, dort findest du bereits das Objekt, welches benötigt wird.
+Tipp: Nutze dafür die Helper-Funktionen .set() und .get() 
+
+### Aufgabe 3
+
+In der Datei `components/SubscriberCounter.jsx` befindet sich nun eine weitere React-Component. Diese ist
+in der Astro-Component `components/SideBarFooter.jsx` als interaktive Island eingebettet und soll die
+aktuelle Anzahl an Subscribern anzeigen. 
+
+Dafür muss diese den globalen State abrufen und im <p>-Tag anzeigen. Importiere dafür den Store und eine weitere Funktion, die den Store lesen kann, sowie bei Änderungen ein re-rendering triggert.
+
+### Aufgabe 4
+
+Vielleicht wirst du beim ausprobieren feststellen, dass sich beim Klick auf den Subscribe-Button,
+der State nicht ändert. Dies liegt daran, dass die Astro-Island noch nicht interaktiv ist.
+
+Erinnere dich zurück an die letzte Stunde und nutze eine Direktive, die den Button erst bei erscheinen im
+Viewport hydriert.
