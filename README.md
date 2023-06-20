@@ -1,19 +1,29 @@
 # Workshop HDM Astro
 
-## Übung 5
+## Übung 6
 
 ### Einführung
 
-Willkommen im zweiten Teil unseres Workshops.
+In dieser Übung geht es um Markdown und Extended Markdown.
 
-Wir starten mit einer leichten Einstiegsübung in Hybrides Rendering
+### Aufgabe 1
 
-### Aufgabe
+Erstelle eine Markdown Page `test.md` in `src/pages`, füge Text hinzu (zB den Text aus einem der Blog Posts) und teste den Aufruf im Browser.
 
-Standardmäßig ist Astro auf SSG (Static Side Generation) konfiguriert.
+### Aufgabe 2
 
-Stelle die astro.config.mjs so um, dass hybrid (Static Side Generation mit opt-out) der neue Default ist.
+Binde nun die `NewLayout.astro` Layout Komponente über Frontmatter in der `.md` page ein.
 
-Stelle dann eine beliebige Page auf Server Side Rendering um.
+### Aufgabe 3
 
-Schaue gerne nochmal in die [Präsentation](https://docs.google.com/presentation/d/1Jfhkrr4miYid448SGklj-X6R9COtJxdIkejl-SBqr4M/edit#slide=id.g2528e13b3cc_0_0) für Inspiration ;)
+Modifiziere die `NewLayout.astro` Komponente so, dass im `Header` und `BaseHead` der Titel aus dem `.md` Frontmatter übergeben wird.
+Der `BaseHead` braucht zusätzlich noch die `description`
+
+Füge eine `h1` Überschrift zum `article` Element hinzu, die den Titel aus der `.md` Seite rendert.
+
+Füge zusätzlich ein `blockquote` Element unter der `h1` Überschrift hinzu, die als Inhalt das automatisch generierte `file` prop von Frontmatter rendert.
+
+### Aufgabe 4
+
+Füge in `test.md` zwei Überschriften hinzu (mittels `#`).
+Verlinke nun so von der einen Überschrift auf die andere, dass du das automatic heading ids feature von Astro verwendest und teste es im Browser.

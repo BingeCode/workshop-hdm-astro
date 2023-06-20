@@ -10,10 +10,17 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "hybrid",
   site: "https://your.domain.here",
-  integrations: [mdx(), sitemap(), tailwind(), image({
-    serviceEntryPoint: "@astrojs/image/sharp",
-    cacheDir: "./.cache/image",
-    logLevel: "debug"
-  }), react()]
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+      cacheDir: "./.cache/image",
+      logLevel: "debug",
+    }),
+    react(),
+  ],
 });
