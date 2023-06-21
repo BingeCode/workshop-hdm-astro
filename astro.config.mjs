@@ -19,4 +19,5 @@ export default defineConfig({
       logLevel: "debug",
     }),
   ],
+  adapter: netlify(),
 });
